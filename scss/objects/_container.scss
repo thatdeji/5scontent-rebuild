@@ -1,0 +1,14 @@
+.o-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 30px;
+  @include media("<=999px") {
+    padding: 0 40px;
+  }
+  @include media("<=999px") {
+    padding: 0 40px;
+  }
+  @include media("<=500px") {
+    padding: 0 20px;
+  }
+}
