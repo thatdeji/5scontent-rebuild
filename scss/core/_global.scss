@@ -1,0 +1,20 @@
+// resets
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+  font-family: Karla, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+body {
+  background-color: $theme-1-bg;
+  color: $theme-1-color;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
