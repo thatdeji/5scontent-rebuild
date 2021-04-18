@@ -1,0 +1,39 @@
+// grid system based on inline block
+.o-grid {
+  position: relative;
+  margin-left: -4rem;
+}
+.o-quarter {
+  width: ((100%) * 1/4);
+}
+.o-third {
+  width: ((100%) * 1/3);
+}
+.o-two-fifths {
+  width: ((100%) * 2/5);
+}
+.o-half {
+  width: ((100%) * 1/2);
+}
+.o-three-fifths {
+  width: ((100%) * 3/5);
+}
+.o-two-thirds {
+  width: ((100%) * 2/3);
+}
+.o-three-quarters {
+  width: ((100%) * 3/4);
+}
+.o-quarter,
+.o-third,
+.o-two-fifths,
+.o-half,
+.o-three-fifths,
+.o-two-thirds,
+.o-three-quarters {
+  padding-left: 4rem;
+  display: inline-block;
+  @include media("<=999px") {
+    width: 100%;
+  }
+}
