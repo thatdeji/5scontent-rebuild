@@ -1,0 +1,18 @@
+.c-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &__tagline {
+    padding: 25px 0;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    @include media("<=1750px") {
+      font-size: 1.4rem;
+    }
+    @include media("<=999px") {
+      display: none;
+    }
+  }
+}

@@ -2,6 +2,10 @@
 .o-grid {
   position: relative;
   margin-left: -4rem;
+  display: flex;
+  @include media("<=999px") {
+    display: block;
+  }
 }
 .o-quarter {
   width: ((100%) * 1/4);

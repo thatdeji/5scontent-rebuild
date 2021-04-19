@@ -1,0 +1,42 @@
+.c-menu {
+  position: relative;
+  @include media("<=999px") {
+    width: 100%;
+  }
+  &__list {
+    display: flex;
+    @include media("<=999px") {
+      @include flex();
+    }
+  }
+  &__item {
+    position: relative;
+    &:not(:last-child):before {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 50%;
+      width: 1px;
+      height: 14px;
+      background-color: $theme-1-color;
+      transform: translate3d(0, -50%, 0);
+    }
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 30px 9px;
+    font-size: 1.9rem;
+    @include media("<=1700px") {
+      font-size: 1.4rem;
+    }
+    @include media("<=999px") {
+      padding: 20px;
+      font-size: 1.6rem;
+    }
+    @include media("<=499px") {
+      font-size: 1.4rem;
+    }
+  }
+}

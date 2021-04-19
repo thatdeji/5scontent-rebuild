@@ -30,6 +30,14 @@ ul {
   list-style: none;
 }
 
+.bg-theme {
+  background-color: #ebeded;
+}
+
+.color-theme {
+  color: #e83c38;
+}
+
 .o-container {
   position: relative;
   margin: 0 auto;
@@ -57,6 +65,15 @@ ul {
 .o-grid {
   position: relative;
   margin-left: -4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 999px) {
+  .o-grid {
+    display: block;
+  }
 }
 
 .o-quarter {
@@ -108,5 +125,204 @@ ul {
   .o-three-quarters {
     width: 100%;
   }
+}
+
+.o-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.c-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.c-header__tagline {
+  padding: 25px 0;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media (max-width: 1750px) {
+  .c-header__tagline {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .c-header__tagline {
+    display: none;
+  }
+}
+
+.c-lang {
+  position: relative;
+  font-size: 1.9rem;
+}
+
+@media (max-width: 1200px) {
+  .c-lang {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .c-lang {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 499px) {
+  .c-lang {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .c-lang--desktop {
+    display: none;
+  }
+}
+
+.c-lang__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-lang__item {
+  position: relative;
+}
+
+.c-lang__item:not(:last-child):before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 14px;
+  background-color: #e83c38;
+  -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+}
+
+.c-lang__link {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 30px 9px;
+}
+
+@media (max-width: 999px) {
+  .c-lang__link {
+    padding: 20px;
+  }
+}
+
+.c-menu {
+  position: relative;
+}
+
+@media (max-width: 999px) {
+  .c-menu {
+    width: 100%;
+  }
+}
+
+.c-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 999px) {
+  .c-menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.c-menu__item {
+  position: relative;
+}
+
+.c-menu__item:not(:last-child):before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 14px;
+  background-color: #e83c38;
+  -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+}
+
+.c-menu__link {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 30px 9px;
+  font-size: 1.9rem;
+}
+
+@media (max-width: 1700px) {
+  .c-menu__link {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .c-menu__link {
+    padding: 20px;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 499px) {
+  .c-menu__link {
+    font-size: 1.4rem;
+  }
+}
+
+.c-svg-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 1.1rem;
+  left: 50%;
+  fill: none;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  stroke-miterlimit: 10;
+  stroke: #e83c38;
+  stroke-width: 2.3px;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  -webkit-transition: stroke-dashoffset 0.3s linear, stroke 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: stroke-dashoffset 0.3s linear, stroke 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.c-menu__link:hover .c-svg-circle,
+.c-lang__link:hover .c-svg-circle,
+.is-active .c-svg-circle {
+  stroke-dashoffset: 0;
 }
 /*# sourceMappingURL=main.css.map */
