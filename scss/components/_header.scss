@@ -14,7 +14,7 @@
       left: 0;
       bottom: 0;
       // background: $theme-1-bg;
-      border-bottom: 1px solid $theme-1-color;
+      border-bottom: 1px solid var(--theme-1-color);
     }
     @include media(">=999px") {
       &:after {

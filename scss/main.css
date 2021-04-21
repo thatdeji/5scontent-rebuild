@@ -1,3 +1,8 @@
+:root {
+  --theme-1-bg: #ebeded;
+  --theme-1-color: #e83c38;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -14,8 +19,8 @@ html {
 }
 
 body {
-  background-color: #ebeded;
-  color: #e83c38;
+  background-color: var(--theme-1-bg);
+  color: var(--theme-1-color);
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -31,11 +36,11 @@ ul {
 }
 
 .bg-theme {
-  background-color: #ebeded;
+  background-color: var(--theme-1-bg);
 }
 
 .color-theme {
-  color: #e83c38;
+  color: var(--theme-1-color);
 }
 
 .o-container {
@@ -157,7 +162,7 @@ ul {
   height: 100%;
   left: 0;
   bottom: 0;
-  border-bottom: 1px solid #e83c38;
+  border-bottom: 1px solid var(--theme-1-color);
 }
 
 @media (min-width: 999px) {
@@ -242,7 +247,7 @@ ul {
   top: 50%;
   width: 1px;
   height: 14px;
-  background-color: #e83c38;
+  background-color: var(--theme-1-color);
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
 }
@@ -300,12 +305,12 @@ ul {
   right: 0;
   top: 50%;
   width: 1px;
-  background-color: #e83c38;
+  background-color: var(--theme-1-color);
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
 }
 
-@media (min-width: 999px) {
+@media (min-width: 1000px) {
   .c-menu__item:not(:last-child):before {
     height: 14px;
   }
@@ -348,7 +353,7 @@ ul {
   stroke-dasharray: 90;
   stroke-dashoffset: 90;
   stroke-miterlimit: 10;
-  stroke: #e83c38;
+  stroke: var(--theme-1-color);
   stroke-width: 2.3px;
   -webkit-transform: translate3d(-50%, 0, 0);
           transform: translate3d(-50%, 0, 0);

@@ -27,7 +27,7 @@
       top: 50%;
       width: 1px;
       height: 14px;
-      background-color: $theme-1-color;
+      background-color: var(--theme-1-color);
       transform: translate3d(0, -50%, 0);
     }
   }
