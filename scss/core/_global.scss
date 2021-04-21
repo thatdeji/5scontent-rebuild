@@ -16,7 +16,7 @@ body {
   color: var(--theme-1-color);
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -36,9 +36,9 @@ h6 {
   font-weight: 300;
   text-transform: uppercase;
 }
-.bg-theme {
+.o-bg-theme {
   background-color: var(--theme-1-bg);
 }
-.color-theme {
+.o-color-theme {
   color: var(--theme-1-color);
 }
