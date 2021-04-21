@@ -1,7 +1,7 @@
 .c-lang {
   position: relative;
   font-size: 1.9rem;
-  @include media("<=1200px") {
+  @include media("<=1700px") {
     font-size: 1.4rem;
   }
   @include media("<=999px") {

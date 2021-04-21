@@ -6,18 +6,20 @@
   &__list {
     display: flex;
     @include media("<=999px") {
-      @include flex();
+      @include flex($justify: space-between);
     }
   }
   &__item {
     position: relative;
     &:not(:last-child):before {
+      @include media(">=999px") {
+        height: 14px;
+      }
       position: absolute;
       content: "";
       right: 0;
       top: 50%;
       width: 1px;
-      height: 14px;
       background-color: $theme-1-color;
       transform: translate3d(0, -50%, 0);
     }

@@ -170,7 +170,7 @@ ul {
   font-size: 1.9rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1700px) {
   .c-lang {
     font-size: 1.4rem;
   }
@@ -253,9 +253,9 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -269,10 +269,15 @@ ul {
   right: 0;
   top: 50%;
   width: 1px;
-  height: 14px;
   background-color: #e83c38;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
+}
+
+@media (min-width: 999px) {
+  .c-menu__item:not(:last-child):before {
+    height: 14px;
+  }
 }
 
 .c-menu__link {
