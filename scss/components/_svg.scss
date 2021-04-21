@@ -19,3 +19,26 @@
 .is-active .c-svg-circle {
   stroke-dashoffset: 0;
 }
+.c-home-header-play__circle {
+  width: 150px;
+  height: 150px;
+  @include media("<=768px") {
+    width: 120px;
+    height: 120px;
+  }
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+.c-home-header-play__circle path {
+  fill: none;
+  stroke-dasharray: 308;
+  stroke-dashoffset: 0;
+  stroke-miterlimit: 10;
+  stroke-width: 0.6;
+  stroke: var(--theme-1-color);
+  -webkit-transition: stroke 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.3s 2.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: stroke 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.3s 2.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

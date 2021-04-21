@@ -35,6 +35,18 @@ ul {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-family: perpetua titling mt, Georgia, times new roman, Times, serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .bg-theme {
   background-color: var(--theme-1-bg);
 }
@@ -365,5 +377,204 @@ ul {
 .c-lang__link:hover .c-svg-circle,
 .is-active .c-svg-circle {
   stroke-dashoffset: 0;
+}
+
+.c-home-header-play__circle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .c-home-header-play__circle {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.c-home-header-play__circle path {
+  fill: none;
+  stroke-dasharray: 308;
+  stroke-dashoffset: 0;
+  stroke-miterlimit: 10;
+  stroke-width: 0.6;
+  stroke: var(--theme-1-color);
+  -webkit-transition: stroke 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.3s 2.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: stroke 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.3s 2.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.c-home-header {
+  position: relative;
+  min-height: 100vh;
+}
+
+@media (max-width: 999px) {
+  .c-home-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 130px 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-home-header {
+    margin-bottom: 130px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-home-header__title-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.c-home-header__title {
+  text-align: center;
+}
+
+@media (max-width: 319px) {
+  .c-home-header__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 320px) {
+  .c-home-header__title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .c-home-header__title {
+    font-size: 3.7rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .c-home-header__title {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-home-header__title {
+    font-size: 6.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-home-header__title {
+    font-size: 5vw;
+  }
+}
+
+.c-home-header-play {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .c-home-header-play {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.c-home-header-play:hover .c-home-header-play__label span {
+  -webkit-transform: translate3d(0, -1.3rem, 0);
+          transform: translate3d(0, -1.3rem, 0);
+}
+
+.c-home-header-play__wrap {
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .c-home-header-play__wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+.c-home-header-play__label {
+  position: absolute;
+  left: 0;
+  bottom: 5rem;
+  width: 100%;
+  display: inline-block;
+}
+
+@media (max-width: 999px) {
+  .c-home-header-play__label {
+    bottom: 50%;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-home-header-play__label {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .c-home-header-play__label {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .c-home-header-play__label {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-home-header-play__label span {
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.1, 0.83, 0.6, 1.33);
+    transition: -webkit-transform 0.3s cubic-bezier(0.1, 0.83, 0.6, 1.33);
+    transition: transform 0.3s cubic-bezier(0.1, 0.83, 0.6, 1.33);
+    transition: transform 0.3s cubic-bezier(0.1, 0.83, 0.6, 1.33), -webkit-transform 0.3s cubic-bezier(0.1, 0.83, 0.6, 1.33);
+  }
+}
+
+.c-home-header-play__label span:last-child {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 /*# sourceMappingURL=main.css.map */

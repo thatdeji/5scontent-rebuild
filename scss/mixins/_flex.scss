@@ -3,6 +3,6 @@
   align-items: $align;
   justify-content: $justify;
   @if ($direction) {
-    direction: $direction;
+    flex-direction: $direction;
   }
 }

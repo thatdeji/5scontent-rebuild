@@ -25,6 +25,17 @@ a {
 ul {
   list-style: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-family: perpetua titling mt, Georgia, times new roman, Times, serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
 .bg-theme {
   background-color: var(--theme-1-bg);
 }
