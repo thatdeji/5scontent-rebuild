@@ -146,6 +146,37 @@ ul {
   width: 100%;
 }
 
+.c-header__line {
+  position: relative;
+}
+
+.c-header__line:before, .c-header__line:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #e83c38;
+}
+
+@media (min-width: 999px) {
+  .c-header__line:after {
+    display: none;
+  }
+}
+
+@media (max-width: 999px) {
+  .c-header__line:before {
+    display: none;
+  }
+}
+
+.c-header__line:before {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
 .c-header__tagline {
   padding: 25px 0;
   font-size: 1.9rem;
