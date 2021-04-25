@@ -1,0 +1,67 @@
+.c-home-about {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    // z-index: 2;
+    background-color: var(--theme-1-color);
+  }
+  @include media(">=700px") {
+    .o-grid {
+      display: flex;
+    }
+    .o-half {
+      width: 50%;
+    }
+  }
+  &__video {
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+    video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__content {
+    padding: 50px 0;
+    height: 100%;
+    @include flex($direction: column);
+    @include media(">=1000px") {
+      padding: 70px 10px 60px 0;
+    }
+  }
+  &__text {
+    margin-bottom: 3.5rem;
+    font-family: Karla, Helvetica, Arial, sans-serif;
+    line-height: 1.3;
+    @include media("<=319px") {
+      font-size: 1.6rem;
+    }
+    @include media(">=320px") {
+      font-size: 1.8rem;
+    }
+    @include media(">=500px") {
+      font-size: 2rem;
+    }
+    @include media(">=700px") {
+      font-size: 2.4rem;
+    }
+    @include media(">=1000px") {
+      font-size: 2.6rem;
+    }
+    @include media(">=1200px") {
+      font-size: 2.8rem;
+    }
+  }
+  .o-about-button-wrap {
+    width: 100%;
+    padding-left: 4.2rem;
+  }
+}

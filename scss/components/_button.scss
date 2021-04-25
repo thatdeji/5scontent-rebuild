@@ -1,0 +1,59 @@
+.c-button {
+  display: inline-block;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: inherit;
+  border: 0;
+  font: inherit;
+  &__circle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: -3.5rem;
+    top: -1.6rem;
+    path {
+      stroke: var(--theme-1-color);
+      fill: none;
+      stroke-dasharray: 164;
+      stroke-dashoffset: 0;
+      stroke-miterlimit: 10;
+      stroke-width: 0.8;
+      transition: stroke-dashoffset 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+  &:hover path {
+    stroke-dashoffset: -164;
+  }
+  &:hover &__label:before {
+    width: 100%;
+  }
+  &__label {
+    position: relative;
+    padding: 1rem 0;
+    @include media("<=999px") {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+    @include media(">=1200px") {
+      font-size: 1.7rem;
+    }
+    @include media("<=1199px") {
+      font-size: 1.6rem;
+    }
+    @include media("<=700px") {
+      font-size: 1.5rem;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--theme-1-color);
+      transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+}
