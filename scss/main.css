@@ -175,7 +175,7 @@ h6 {
   height: 50px;
   position: absolute;
   left: -3.5rem;
-  top: -1.6rem;
+  top: -1.4rem;
 }
 
 .c-button__circle path {
@@ -728,11 +728,11 @@ h6 {
      object-fit: cover;
 }
 
-.c-home-about {
+.c-about {
   position: relative;
 }
 
-.c-home-about:before {
+.c-about:before {
   content: "";
   position: absolute;
   left: 0;
@@ -743,17 +743,17 @@ h6 {
 }
 
 @media (min-width: 700px) {
-  .c-home-about .o-grid {
+  .c-about .o-grid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .c-home-about .o-half {
+  .c-about .o-half {
     width: 50%;
   }
 }
 
-.c-home-about__video {
+.c-about__video {
   width: 100%;
   position: relative;
   -o-object-fit: cover;
@@ -761,14 +761,14 @@ h6 {
   overflow: hidden;
 }
 
-.c-home-about__video video {
+.c-about__video video {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.c-home-about__content {
+.c-about__content {
   padding: 50px 0;
   height: 100%;
   display: -webkit-box;
@@ -787,55 +787,125 @@ h6 {
 }
 
 @media (min-width: 1000px) {
-  .c-home-about__content {
+  .c-about__content {
     padding: 70px 10px 60px 0;
   }
 }
 
-.c-home-about__text {
+.c-about__text {
   margin-bottom: 3.5rem;
   font-family: Karla, Helvetica, Arial, sans-serif;
   line-height: 1.3;
 }
 
 @media (max-width: 319px) {
-  .c-home-about__text {
+  .c-about__text {
     font-size: 1.6rem;
   }
 }
 
 @media (min-width: 320px) {
-  .c-home-about__text {
+  .c-about__text {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 500px) {
-  .c-home-about__text {
+  .c-about__text {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 700px) {
-  .c-home-about__text {
+  .c-about__text {
     font-size: 2.4rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .c-home-about__text {
+  .c-about__text {
     font-size: 2.6rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .c-home-about__text {
+  .c-about__text {
     font-size: 2.8rem;
   }
 }
 
-.c-home-about .o-about-button-wrap {
+.c-about .o-about-button-wrap {
   width: 100%;
   padding-left: 4.2rem;
+}
+
+.c-work {
+  position: relative;
+}
+
+.c-work:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--theme-1-color);
+}
+
+.c-work-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
+}
+
+@media (min-width: 1000px) {
+  .c-work-header {
+    height: 100vh;
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 319px) {
+  .c-work-header__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 320px) {
+  .c-work-header__title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .c-work-header__title {
+    font-size: 3.7rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .c-work-header__title {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-work-header__title {
+    font-size: 6.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-work-header__title {
+    font-size: 5vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */

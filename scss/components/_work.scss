@@ -1,0 +1,40 @@
+.c-work {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--theme-1-color);
+  }
+}
+.c-work-header {
+  position: relative;
+  @include flex();
+  padding-top: 100px;
+  @include media(">=1000px") {
+    height: 100vh;
+    padding-top: 65px;
+  }
+  &__title {
+    @include media("<=319px") {
+      font-size: 2.5rem;
+    }
+    @include media(">=320px") {
+      font-size: 3rem;
+    }
+    @include media(">=500px") {
+      font-size: 3.7rem;
+    }
+    @include media(">=700px") {
+      font-size: 5rem;
+    }
+    @include media(">=1000px") {
+      font-size: 6.2rem;
+    }
+    @include media(">=1200px") {
+      font-size: 5vw;
+    }
+  }
+}
