@@ -1,12 +1,25 @@
 .c-work {
   position: relative;
-  &:before {
+  padding-bottom: 80px;
+  &:before,
+  &:after {
     position: absolute;
     content: "";
     left: 0;
     width: 100%;
     height: 1px;
     background-color: var(--theme-1-color);
+  }
+  &:after {
+    bottom: 0;
+  }
+  .o-work-button-wrap {
+    @include media(">=1000px") {
+      padding: 50px 0 90px 30px;
+    }
+    @include media("<=1000px") {
+      text-align: center;
+    }
   }
 }
 .c-work-header {
