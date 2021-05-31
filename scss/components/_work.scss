@@ -17,7 +17,7 @@
     @include media(">=1000px") {
       padding: 50px 0 90px 30px;
     }
-    @include media("<=1000px") {
+    @include media("<=999px") {
       text-align: center;
     }
   }

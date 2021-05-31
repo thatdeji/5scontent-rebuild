@@ -1,0 +1,128 @@
+.c-clients {
+  &__header {
+    position: relative;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: Karla, Helvetica, Arial, sans-serif;
+    @include media(">=500px") {
+      font-size: 2rem;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--theme-1-color);
+    }
+  }
+  &__list {
+    @include flex();
+    flex-wrap: wrap;
+    position: relative;
+  }
+  &__item {
+    position: relative;
+    @include media(">=1000px") {
+      width: 25%;
+    }
+    @include media("<=999px") {
+      width: 33.33333%;
+    }
+    @include media("<=699px") {
+      width: 50%;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: var(--theme-1-color);
+    }
+    &:before {
+      width: 1px;
+      height: 100%;
+      top: 0;
+      right: 0;
+    }
+    &:after {
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+    }
+    @include media(">=1000px") {
+      &:nth-child(4):before,
+      &:nth-child(8):before {
+        display: none;
+      }
+    }
+    @include media("<=999px") {
+      &:nth-child(3):before,
+      &:nth-child(6):before,
+      &:nth-child(9):before {
+        display: none;
+      }
+    }
+    @include media("<=699px") {
+      &:nth-child(2):before,
+      &:nth-child(4):before,
+      &:nth-child(6):before,
+      &:nth-child(8):before {
+        display: none;
+      }
+      &:nth-child(3):before {
+        display: block;
+      }
+    }
+  }
+  &__item--desktop {
+    display: none;
+    @include media("<=999px") {
+      display: block;
+    }
+    @include media(">=700px") {
+      display: block;
+    }
+    @include media(">=1000px") {
+      display: none;
+    }
+    @include media("<=699px") {
+      display: none;
+    }
+  }
+  &__link {
+    @include flex();
+    @include media(">=1000px") {
+      height: 9vw;
+    }
+    @include media("<=999px") {
+      height: 12vw;
+    }
+    @include media("<=699px") {
+      height: 13vw;
+    }
+    svg {
+      fill: var(--theme-1-color);
+      @include media(">=1000px") {
+        max-width: 13vw;
+        max-height: 3vw;
+      }
+      @include media("<=999px") {
+        max-width: 17vw;
+        max-height: 5vw;
+      }
+      @include media("<=699px") {
+        max-width: 23vw;
+        max-height: 5.5vw;
+      }
+    }
+    path {
+      fill: var(--theme-1-color);
+    }
+    .ford1 {
+      fill: var(--theme-1-bg);
+    }
+  }
+}
