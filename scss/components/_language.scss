@@ -15,6 +15,18 @@
       display: none;
     }
   }
+  &--mobile {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 56px;
+    z-index: 100;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+    @include media("<=999px") {
+      display: block;
+    }
+  }
   &__list {
     display: flex;
   }

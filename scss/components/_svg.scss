@@ -19,10 +19,12 @@
   bottom: 0;
   top: 0.2rem;
 }
+.is-active .c-svg-circle {
+  stroke-dashoffset: 0;
+}
 @media (hover) {
   .c-menu__link:hover .c-svg-circle,
   .c-lang__link:hover .c-svg-circle,
-  .is-active .c-svg-circle,
   .c-footer__link:hover .c-svg-circle {
     stroke-dashoffset: 0;
   }

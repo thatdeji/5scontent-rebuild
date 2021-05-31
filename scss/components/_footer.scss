@@ -19,6 +19,12 @@
         transform: translateY(0);
       }
     }
+    &--mobile {
+      display: none;
+      @include media("<=999px") {
+        display: block;
+      }
+    }
     &--hide {
       opacity: 0;
       transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -44,6 +50,11 @@
   &__link {
     line-height: 1.8;
     position: relative;
+    &--social {
+      @include media("<=999px") {
+        margin-left: 10px;
+      }
+    }
   }
   &__br--mobile {
     @include media("<=999px") {
