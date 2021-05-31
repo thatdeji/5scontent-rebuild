@@ -1134,4 +1134,32 @@ h6 {
 .c-clients__link .ford1 {
   fill: var(--theme-1-bg);
 }
+
+.c-clients__text {
+  position: relative;
+  padding: 25px 0;
+}
+
+.c-clients__text:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--theme-1-color);
+}
+
+@media (min-width: 1000px) {
+  .c-clients__text {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .c-clients__text {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
