@@ -50,4 +50,16 @@
       display: none;
     }
   }
+  &__buttons {
+    padding: 80px 0 15px 0;
+    @include media("<=999px") {
+      display: none;
+    }
+    .c-button__wrap {
+      padding: 20px 0;
+    }
+    .c-button {
+      transform-origin: left center;
+    }
+  }
 }

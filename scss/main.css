@@ -1244,4 +1244,67 @@ h6 {
     display: none;
   }
 }
+
+.c-footer__buttons {
+  padding: 80px 0 15px 0;
+}
+
+@media (max-width: 999px) {
+  .c-footer__buttons {
+    display: none;
+  }
+}
+
+.c-footer__buttons .c-button__wrap {
+  padding: 20px 0;
+}
+
+.c-footer__buttons .c-button {
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.c-marquee {
+  padding: 30px 0;
+  position: relative;
+}
+
+.c-marquee:before, .c-marquee:after {
+  position: absolute;
+  content: "";
+  background-color: var(--theme-1-color);
+  height: 1px;
+  width: 100%;
+}
+
+.c-marquee:before {
+  top: 0;
+}
+
+.c-marquee:after {
+  bottom: 0;
+}
+
+.c-marquee__text {
+  font-family: perpetua titling mt, Georgia, times new roman, Times, serif;
+  margin-left: 60px;
+}
+
+@media (min-width: 1000px) {
+  .c-marquee__text {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 999px) {
+  .c-marquee__text {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 499px) {
+  .c-marquee__text {
+    font-size: 30px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
