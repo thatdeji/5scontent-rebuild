@@ -475,10 +475,19 @@ h6 {
   transition: stroke-dashoffset 0.3s linear, stroke 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.c-menu__link:hover .c-svg-circle,
-.c-lang__link:hover .c-svg-circle,
-.is-active .c-svg-circle {
-  stroke-dashoffset: 0;
+.c-footer__link .c-svg-circle {
+  left: -1.3rem;
+  bottom: 0;
+  top: 0.2rem;
+}
+
+@media (hover) {
+  .c-menu__link:hover .c-svg-circle,
+  .c-lang__link:hover .c-svg-circle,
+  .is-active .c-svg-circle,
+  .c-footer__link:hover .c-svg-circle {
+    stroke-dashoffset: 0;
+  }
 }
 
 .c-home-header-play__circle {
@@ -1153,14 +1162,86 @@ h6 {
 
 @media (min-width: 1000px) {
   .c-clients__text {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 999px) {
   .c-clients__text {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+}
+
+.c-footer {
+  position: relative;
+}
+
+.c-footer__links-container, .c-footer__copyright-container {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 999px) {
+  .c-footer__copyright-container {
+    display: none;
+  }
+}
+
+.c-footer__copyright--desktop {
+  overflow: hidden;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.c-footer__copyright--desktop:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.c-footer__copyright--hide {
+  opacity: 0;
+  -webkit-transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.c-footer__copyright:hover .c-footer__copyright--hide {
+  opacity: 1;
+}
+
+.c-footer__text {
+  text-transform: uppercase;
+}
+
+@media (max-width: 999px) {
+  .c-footer__text {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+  }
+  .c-footer__text--social {
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-footer__text {
+    font-size: 1.5rem;
+  }
+}
+
+.c-footer__link {
+  line-height: 1.8;
+  position: relative;
+}
+
+@media (max-width: 999px) {
+  .c-footer__br--mobile {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

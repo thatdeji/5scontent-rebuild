@@ -139,11 +139,11 @@
       background-color: var(--theme-1-color);
     }
     @include media(">=1000px") {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
     }
     @include media("<=999px") {
       text-align: center;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
   }
 }
