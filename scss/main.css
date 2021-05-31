@@ -912,7 +912,143 @@ h6 {
 @media (max-width: 999px) {
   .c-work .o-work-button-wrap {
     text-align: center;
+    padding: 70px 0 30px 0;
   }
+}
+
+.c-work__list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 999px) {
+  .c-work__list {
+    margin-top: 25px;
+  }
+}
+
+.c-work__item {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .c-work__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-work__item {
+    margin-bottom: 70px;
+  }
+  .c-work__item:nth-child(1) {
+    padding: 0 4vw;
+  }
+  .c-work__item:nth-child(2) {
+    padding-left: 11vw;
+  }
+  .c-work__item:nth-child(3) {
+    padding-left: 11.3vw;
+  }
+  .c-work__item:nth-child(4) {
+    padding: 0 11vw 0 6vw;
+  }
+  .c-work__item:nth-child(5) {
+    padding-left: 5vw;
+    margin-left: 17vw;
+  }
+}
+
+.c-work__link {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.c-work__link:hover .c-quickview__label {
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.c-work__link:hover .c-work__marquee,
+.c-work__link:hover .c-work__video {
+  opacity: 1;
+}
+
+.c-work__link:hover .c-work__text,
+.c-work__link:hover .c-work__thumbnail {
+  opacity: 0;
+}
+
+.c-work__showcase {
+  position: relative;
+}
+
+.c-work__thumbnail {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  -webkit-transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.c-work__title {
+  padding: 15px 0;
+  position: relative;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1000px) {
+  .c-work__title:before {
+    position: absolute;
+    content: "";
+    background-color: var(--theme-1-color);
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.c-work__text {
+  -webkit-transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.c-work__marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.c-work__marquee span {
+  margin-left: 20px;
+}
+
+.c-work__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 100%;
+  opacity: 0;
+  z-index: 3;
+  -webkit-transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .c-work-header {
@@ -970,6 +1106,110 @@ h6 {
   .c-work-header__title {
     font-size: 5vw;
   }
+}
+
+.c-quickview {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  z-index: 20;
+  background: none;
+  border: 0;
+}
+
+@media (min-width: 1000px) {
+  .c-quickview {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.c-quickview__label {
+  color: var(--theme-1-color);
+  background-color: var(--theme-1-bg);
+  display: inline-block;
+  -webkit-transform: translate(-105%, -50%);
+          transform: translate(-105%, -50%);
+  -webkit-transition: border-radius 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: border-radius 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1), border-radius 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1), border-radius 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (min-width: 1000px) {
+  .c-quickview__label {
+    padding: 5px 10px;
+  }
+}
+
+.c-quickview__play {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (min-width: 1000px) {
+  .c-quickview__play {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.c-quickview__play:before, .c-quickview__play:after {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  background-color: var(--theme-1-bg);
+  -webkit-transition: opacity 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.3s 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.c-quickview__play:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale3d(2, 2, 1);
+          transform: scale3d(2, 2, 1);
+  opacity: 0;
+}
+
+.c-quickview__play:after {
+  top: 5px;
+  left: 5px;
+  border: 1px solid var(--theme-1-color);
+  width: 68px;
+  height: 68px;
+  -webkit-transform: scale3d(0, 0, 1);
+          transform: scale3d(0, 0, 1);
+}
+
+.c-quickview:hover .c-quickview__play:before {
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.c-quickview:hover .c-quickview__play:after {
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.c-quickview:hover .c-quickview__label {
+  border-radius: 100%;
+  -webkit-transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+          transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
 }
 
 .c-clients__header {
@@ -1246,6 +1486,7 @@ h6 {
 
 .c-footer__text {
   text-transform: uppercase;
+  line-height: 1.6;
 }
 
 @media (max-width: 999px) {
@@ -1261,7 +1502,7 @@ h6 {
 
 @media (min-width: 1000px) {
   .c-footer__text {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
 }
 

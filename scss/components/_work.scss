@@ -19,7 +19,112 @@
     }
     @include media("<=999px") {
       text-align: center;
+      padding: 70px 0 30px 0;
     }
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    @include media("<=999px") {
+      margin-top: 25px;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    @include media(">=700px") {
+      width: 50%;
+    }
+    @include media(">=1000px") {
+      margin-bottom: 70px;
+      &:nth-child(1) {
+        padding: 0 4vw;
+      }
+      &:nth-child(2) {
+        padding-left: 11vw;
+      }
+      &:nth-child(3) {
+        padding-left: 11.3vw;
+      }
+      &:nth-child(4) {
+        padding: 0 11vw 0 6vw;
+      }
+      &:nth-child(5) {
+        padding-left: 5vw;
+        margin-left: 17vw;
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: block;
+    &:hover {
+      .c-quickview__label {
+        transform: translate(0, -50%);
+      }
+      .c-work__marquee,
+      .c-work__video {
+        opacity: 1;
+      }
+      .c-work__text,
+      .c-work__thumbnail {
+        opacity: 0;
+      }
+    }
+  }
+  &__showcase {
+    position: relative;
+  }
+  &__thumbnail {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  &__title {
+    padding: 15px 0;
+    position: relative;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    &:before {
+      @include media(">=1000px") {
+        position: absolute;
+        content: "";
+        background-color: var(--theme-1-color);
+        height: 1px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  &__text {
+    transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  &__marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    span {
+      margin-left: 20px;
+    }
+  }
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    max-height: 100%;
+    opacity: 0;
+    z-index: 3;
+    transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 .c-work-header {
