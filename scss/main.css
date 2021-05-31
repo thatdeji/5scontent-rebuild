@@ -1138,6 +1138,7 @@ h6 {
 .c-clients__text {
   position: relative;
   padding: 25px 0;
+  text-transform: uppercase;
 }
 
 .c-clients__text:after {
