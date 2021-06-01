@@ -36,6 +36,12 @@
   &__text {
     text-transform: uppercase;
     line-height: 1.6;
+    &--space {
+      margin-left: 2rem;
+      @include media("<=999px") {
+        margin-left: 0;
+      }
+    }
     @include media("<=999px") {
       text-align: center;
       padding-bottom: 20px;

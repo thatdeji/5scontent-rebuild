@@ -129,7 +129,7 @@
                   </li>
                 </ul>
               </nav>
-              <h2 class="c-header__tagline" js="tagline">
+              <h2 class="c-header__tagline" id="js-tagline">
                 <a href="#">
                 5S is a creative studio
               </a>
@@ -152,7 +152,7 @@
 
         <!--Home title-->
         <div class="c-home-header__title-wrap">
-          <h1 class="c-home-header__title">
+          <h1 class="c-home-header__title" id="js-home-title">
             <div class="c-home-header__title-line">
               It takes 7 seconds
             </div>
@@ -167,13 +167,13 @@
       </div>
       <!--Home video-->
       <a href="#" class="c-home-header-video__wrap">
-        <div class="c-home-header-video">
+        <div class="c-home-header-video" id="js-home-video">
           <video muted autoplay loop src="assets/video/5S_2.mp4"></video>
         </div>
       </a>
       <!--Home video play-->
       <div class="c-home-header-play__wrap">
-        <a href="#" class="c-home-header-play">
+        <a href="#" class="c-home-header-play" id="js-home-play">
           <span class="c-home-header-play__label">
               <span>play</span>
           <span>reel</span>
@@ -181,7 +181,7 @@
           <!--svg cicrle around link-->
           <svg class="c-home-header-play__circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
-            <path class="c-home-header-play__circle__path" d="M49.9,1.1c27,0,49,21.9,49,48.9S77,98.9,50,98.9S1.1,77,1.1,50C1.1,23.1,23,1.2,49.9,1.1"></path>
+            <path class="c-home-header-play__circle__path" id="js-home-play-path" d="M49.9,1.1c27,0,49,21.9,49,48.9S77,98.9,50,98.9S1.1,77,1.1,50C1.1,23.1,23,1.2,49.9,1.1"></path>
           </svg>
         </a>
       </div>
@@ -558,6 +558,13 @@
 
 
 
+
+
+
+
+
+
+
                           .lancome1 {
                             fill-rule: evenodd;
                             clip-rule: evenodd;
@@ -685,6 +692,13 @@
                             clip-rule: evenodd;
                             fill: #2F5E9C;
                           }
+
+
+
+
+
+
+
 
 
 
@@ -1198,6 +1212,13 @@
 
 
 
+
+
+
+
+
+
+
                           .airfrance1 {
                             clip-path: url(#SVGID_3_);
                           }
@@ -1302,7 +1323,7 @@
             <div class="c-footer__links-container">
               <div class="o-grid">
                 <div class="o-third">
-                  <p class="c-footer__text">
+                  <p class="c-footer__text c-footer__text--space">
                     <a href="#" class="c-footer__link">
                       Info@ 
                       <br class="c-footer__br--mobile" />
@@ -1453,7 +1474,8 @@
   </main>
   <!--MAIN PAGE ENDS-->
 
-
+  <!--gsap source link-->
+  <script src="lib/gsap.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 

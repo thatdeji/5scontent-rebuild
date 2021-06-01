@@ -735,6 +735,8 @@ h6 {
   position: relative;
   z-index: -3;
   margin: -30px -70px -40px 0;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
 }
 
 @media (min-width: 499px) {
@@ -1487,6 +1489,16 @@ h6 {
 .c-footer__text {
   text-transform: uppercase;
   line-height: 1.6;
+}
+
+.c-footer__text--space {
+  margin-left: 2rem;
+}
+
+@media (max-width: 999px) {
+  .c-footer__text--space {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 999px) {

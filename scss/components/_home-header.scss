@@ -116,6 +116,7 @@
   position: relative;
   z-index: -3;
   margin: -30px -70px -40px 0;
+  transform-origin: top center;
   @include media(">=499px") {
     width: 300px;
     height: 290px;
