@@ -1,0 +1,41 @@
+.c-preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--theme-1-bg);
+  overflow: hidden;
+  z-index: 9999;
+  @include flex();
+  &__line {
+    position: relative;
+    height: 1.2px;
+    width: 90px;
+    transform: scaleX(1);
+    transform-origin: center right;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--theme-1-color);
+      transform-origin: left center;
+      animation: lineAnim 1.2s infinite cubic-bezier(0.075, 0.82, 0.165, 1)
+        forwards;
+      @keyframes lineAnim {
+        0% {
+          transform: scaleX(0);
+        }
+        50% {
+          transform: scaleX(1);
+        }
+        100% {
+          transform: scaleX(0);
+        }
+      }
+    }
+  }
+}
