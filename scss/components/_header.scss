@@ -14,7 +14,7 @@
       height: 100%;
       left: 0;
       bottom: 0;
-      background: $theme-1-bg;
+      background: var(--theme-1-bg);
       border-bottom: 1px solid var(--theme-1-color);
       z-index: -1;
     }

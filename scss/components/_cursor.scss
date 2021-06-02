@@ -1,0 +1,26 @@
+.c-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 62x;
+  height: 62px;
+  z-index: 10000;
+  &__click {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 62px;
+    height: 62px;
+    margin: 4px 0 0 4px;
+  }
+  &__ripple {
+    position: absolute;
+    border: 1px solid var(--theme-1-color);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}

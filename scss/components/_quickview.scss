@@ -58,7 +58,7 @@
       border: 1px solid var(--theme-1-color);
       width: 68px;
       height: 68px;
-      transform: scale3d(0, 0, 1);
+      transform: translate(-6px, -6px) scale3d(0, 0, 1);
     }
   }
   &:hover {

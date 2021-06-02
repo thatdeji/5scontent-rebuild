@@ -10,6 +10,13 @@
 </head>
 
 <body>
+  <!--CURSOR-->
+  <div class="c-cursor" id="js-cursor">
+    <div class="c-cursor__click">
+      <div class="c-cursor__ripple" id="js-ripple"></div>
+      <div class="c-cursor__ripple" id="js-ripple"></div>
+    </div>
+  </div>
   <!--Header logo-->
   <!--<div class="c-site-logo">
     <a href="#" class="c-site-logo__link">
@@ -23,7 +30,7 @@
     </a>
   </div>-->
   <!--language mobile-->
-  <nav class="c-lang c-lang--mobile">
+  <nav class="c-lang c-lang--mobile" id="js-language-mobile">
     <ul class="c-lang__list">
       <!--english-->
       <li class="c-lang__item">
@@ -54,7 +61,7 @@
   <header class="c-header">
     <!--container-->
     <div class="o-container">
-      <div class="c-header__line">
+      <div class="c-header__line" id="js-header-line">
 
 
         <!--grid system-->
@@ -151,15 +158,15 @@
       <div class="o-container">
 
         <!--Home title-->
-        <div class="c-home-header__title-wrap">
+        <div class="c-home-header__title-wrap" id="js-home-header">
           <h1 class="c-home-header__title" id="js-home-title">
-            <div class="c-home-header__title-line">
+            <div class="c-home-header__title-line" id="js-title-line">
               It takes 7 seconds
             </div>
-            <div class="c-home-header__title-line">
+            <div class="c-home-header__title-line" id="js-title-line">
               to make an impression
             </div>
-            <div class="c-home-header__title-line">
+            <div class="c-home-header__title-line" id="js-title-line">
               we do it in 5
             </div>
           </h1>
@@ -197,17 +204,17 @@
           <div class="o-quarter"></div>
           <div class="o-three-quarters">
             <div class="o-bg-theme">
-              <div class="c-about">
+              <div class="c-about" id="js-about">
                 <div class="o-grid">
                   <div class="o-half">
                     <!-- about section video-->
-                    <div class="c-about__video">
+                    <div class="c-about__video" id="js-about-video">
                       <video muted autoplay loop src="assets/video/5S-COUNTDOWN_02.mp4"></video>
                     </div>
                   </div>
                   <div class="o-half">
                     <div class="c-about__content">
-                      <h3 class="c-about__text">5S is a creative studio born and bred in montreal. Our approach infuses strategic insight into storytelling
+                      <h3 class="c-about__text" id="js-about-text">5S is a creative studio born and bred in montreal. Our approach infuses strategic insight into storytelling
                         for brands and agencies seeking to stand out.</h3>
                       <div class="o-about-button-wrap">
                         <a href="" class="c-button">
@@ -235,9 +242,9 @@
     <section class="o-section">
       <div class="o-container">
         <div class="o-bg-theme">
-          <div class="c-work">
+          <div class="c-work" id="js-work">
             <div class="c-work-header">
-              <h2 class="c-work-header__title">
+              <h2 class="c-work-header__title" id="js-work-header">
                 <div class="c-work-header__title-line">
                   Projects that
                 </div>
@@ -247,10 +254,10 @@
               </h2>
             </div>
             <!--work-->
-            <ul class="c-work__list">
+            <ul class="c-work__list" id="js-work-container">
               <li class="c-work__item">
                 <a href="#" class="c-work__link">
-                  <div class="c-work__showcase">
+                  <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/THUMBNAIL-1.png" alt="Musicbed showcase image" class="c-work__thumbnail">
                     <button class="c-quickview">
                       <span class="c-quickview__label">
@@ -261,7 +268,7 @@
                     </button>
                     <video muted autoplay loop src="assets/video/MB-ONL-5s.mp4" class="c-work__video"></video>
                   </div>
-                  <div class="c-work__title">
+                  <div class="c-work__title o-bg-theme">
                     <div class="c-work__text">Musicbed</div>
                     <marquee behavior="" direction="left" class="c-work__marquee">
                       <span>Musicbed</span>
@@ -292,7 +299,7 @@
               </li>
               <li class="c-work__item">
                 <a href="#" class="c-work__link">
-                  <div class="c-work__showcase">
+                  <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/Group-1.png" alt="Musicbed showcase image" class="c-work__thumbnail">
                     <button class="c-quickview">
                       <span class="c-quickview__label">
@@ -303,7 +310,7 @@
                     </button>
                     <video muted autoplay loop src="assets/video/Work_GURU-MATE_EN-1.mp4" class="c-work__video"></video>
                   </div>
-                  <div class="c-work__title">
+                  <div class="c-work__title o-bg-theme">
                     <div class="c-work__text">Guru Yerba Mate</div>
                     <marquee behavior="" direction="left" class="c-work__marquee">
                       <span>Guru Yerba Mate</span>
@@ -334,7 +341,7 @@
               </li>
               <li class="c-work__item">
                 <a href="#" class="c-work__link">
-                  <div class="c-work__showcase">
+                  <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/DECA_Thumbail.jpg" alt="Musicbed showcase image" class="c-work__thumbnail">
                     <button class="c-quickview">
                       <span class="c-quickview__label">
@@ -345,7 +352,7 @@
                     </button>
                     <video muted autoplay loop src="assets/video/Work_DECATHLON.mp4" class="c-work__video"></video>
                   </div>
-                  <div class="c-work__title">
+                  <div class="c-work__title o-bg-theme">
                     <div class="c-work__text">Decathlon</div>
                     <marquee behavior="" direction="left" class="c-work__marquee">
                       <span>Decathlon</span>
@@ -376,7 +383,7 @@
               </li>
               <li class="c-work__item">
                 <a href="#" class="c-work__link">
-                  <div class="c-work__showcase">
+                  <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/Simons_Thumbnail.jpg" alt="Musicbed showcase image" class="c-work__thumbnail">
                     <button class="c-quickview">
                       <span class="c-quickview__label">
@@ -387,7 +394,7 @@
                     </button>
                     <video muted autoplay loop src="assets/video/Work_SIMONS.mp4" class="c-work__video"></video>
                   </div>
-                  <div class="c-work__title">
+                  <div class="c-work__title o-bg-theme">
                     <div class="c-work__text">Simons X F-1840</div>
                     <marquee behavior="" direction="left" class="c-work__marquee">
                       <span>Simons X F-1840</span>
@@ -418,7 +425,7 @@
               </li>
               <li class="c-work__item">
                 <a href="#" class="c-work__link">
-                  <div class="c-work__showcase">
+                  <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/THUMBNAIL-3.png" alt="Musicbed showcase image" class="c-work__thumbnail">
                     <button class="c-quickview">
                       <span class="c-quickview__label">
@@ -429,7 +436,7 @@
                     </button>
                     <video muted autoplay loop src="assets/video/5S.mp4" class="c-work__video"></video>
                   </div>
-                  <div class="c-work__title">
+                  <div class="c-work__title o-bg-theme">
                     <div class="c-work__text">Familiprix</div>
                     <marquee behavior="" direction="left" class="c-work__marquee">
                       <span>Familiprix</span>
@@ -483,8 +490,8 @@
           <div class="o-quarter"></div>
           <div class="o-three-quarters">
             <div class="o-bg-theme">
-              <div class="c-clients">
-                <h3 class="c-clients__header">Clients</h3>
+              <div class="c-clients" id="js-client-container">
+                <h3 class="c-clients__header" id="js-client">Clients</h3>
                 <ul class="c-clients__list">
                   <li class="c-clients__item">
                     <a href="#" class="c-clients__link">
@@ -494,6 +501,32 @@
                           .lancome0 {
                             display: none;
                           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -692,6 +725,32 @@
                             clip-rule: evenodd;
                             fill: #2F5E9C;
                           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1178,47 +1237,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                           .airfrance1 {
                             clip-path: url(#SVGID_3_);
                           }
@@ -1288,7 +1306,7 @@
 
                 </ul>
               </div>
-              <p class="c-clients__text">It's the relationships we've built that keep us dreaming</p>
+              <p class="c-clients__text" id="js-client">It's the relationships we've built that keep us dreaming</p>
             </div>
           </div>
         </div>
@@ -1297,14 +1315,14 @@
     <!--CLIENTS SECTION ENDS-->
 
     <!--FOOTER SECTION-->
-    <footer class="c-footer">
+    <footer class="c-footer o-bg-theme" id="js-footer-container">
       <div class="o-container">
         <div class="o-grid">
           <div class="o-quarter">
             <!--copyright-->
             <div class="c-footer__copyright-container">
               <!--desktop copyright-->
-              <div class="c-footer__copyright c-footer__copyright--desktop">
+              <div class="c-footer__copyright c-footer__copyright--desktop" id="js-footer">
                 <p class="c-footer__text">
                   © <span class="c-footer__copyright--hide">5s 2021</span>
                   <br>
@@ -1323,7 +1341,7 @@
             <div class="c-footer__links-container">
               <div class="o-grid">
                 <div class="o-third">
-                  <p class="c-footer__text c-footer__text--space">
+                  <p class="c-footer__text c-footer__text--space" id="js-footer">
                     <a href="#" class="c-footer__link">
                       Info@ 
                       <br class="c-footer__br--mobile" />
@@ -1342,7 +1360,7 @@
                   </p>
                 </div>
                 <div class="o-third">
-                  <p class="c-footer__text">
+                  <p class="c-footer__text" id="js-footer">
                     <a href="#" class="c-footer__link">
                       4321 rue clark 
                       <br />
@@ -1356,7 +1374,7 @@
                   </p>
                 </div>
                 <div class="o-third">
-                  <p class="c-footer__text">
+                  <p class="c-footer__text" id="js-footer">
                     <a href="#" class="c-footer__link c-footer__link--social">
                       Facebook
                       <svg class="c-svg-circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
@@ -1408,7 +1426,7 @@
       <!--MARQUEE SECTION ENDS-->
       <div class="o-container">
         <!--copyright mobile-->
-        <div class="c-footer__copyright c-footer__copyright--mobile">
+        <div class="c-footer__copyright c-footer__copyright--mobile" id="js-footer">
           <p class="c-footer__text">
             © 2021
             <br> website by
@@ -1476,6 +1494,8 @@
 
   <!--gsap source link-->
   <script src="lib/gsap.min.js"></script>
+  <script src="lib/ScrollTrigger.min.js"></script>
+  <script src="lib/CSSRulePlugin.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 
