@@ -1,7 +1,20 @@
 (function() {
   window.addEventListener("load", () => {
     // preloader animation
-    gsap.to("#js-preloader", { autoAlpha: 0, duration: 6 });
+    gsap.timeline().fromTo(
+      "#js-preloader",
+      {
+        autoAlpha: 1
+      },
+      {
+        autoAlpha: 0,
+        duration: 0.8,
+        delay: 3,
+        onComplete: function() {
+          pageAnimation();
+        }
+      }
+    );
     // ScrollTriger initialization
     gsap.registerPlugin(ScrollTrigger);
     //var
@@ -63,130 +76,112 @@
       }
     }
     pinEffect();
-    //Intro Animation
-    const tl = gsap.timeline();
-    tl
-      .fromTo(
-        "#js-language",
-        { y: "-100px" },
-        {
+    function pageAnimation() {
+      //Intro Animation
+      const tl = gsap.timeline();
+      tl
+        .to("#js-language", {
           y: "0",
           ease: "Expo.easeOut"
-        }
-      )
-      .fromTo(
-        "#js-language-mobile",
-        { x: "100px" },
-        {
+        })
+        .to("#js-language-mobile", {
           x: "0",
           ease: "Expo.easeOut"
-        }
-      )
-      .fromTo(
-        "#js-menu",
-        { y: "-70px" },
-        {
+        })
+        .to("#js-menu", {
           y: "0",
           ease: "Expo.easeOut"
-        }
-      )
-      .fromTo(
-        "#js-tagline",
-        { y: "-60px" },
-        {
+        })
+        .to("#js-tagline", {
           y: "0",
           ease: "Expo.easeOut"
-        }
-      )
-      .fromTo(
-        "#js-title-line",
-        { scaleY: "0" },
-        {
+        })
+        .to("#js-title-line", {
           scaleY: "1",
           stagger: 0.3,
           ease: Power2.easeInOut
-        }
-      )
-      .fromTo(
-        "#js-home-title",
-        { y: "3vw" },
-        {
+        })
+        .to("#js-home-title", {
           y: "0",
           ease: Power2.easeInOut
-        }
-      )
-      .fromTo(
-        "#js-home-video",
-        { rotateX: "-90deg", perspective: "1000px", autoAlpha: 0 },
+        })
+        .to(
+          "#js-home-video",
+          {
+            rotateX: "0",
+            perspective: "1000px",
+            autoAlpha: 1,
+            duration: 0.9
+          },
+          "-=0.2"
+        )
+        .to("#js-home-play", { opacity: 1 })
+        .to(
+          "#js-home-play-path",
+          { strokeDashoffset: 0, duration: 0.9 },
+          "-=0.3"
+        );
+      // Scroll animations
+      gsap.fromTo(
+        "#js-about-video",
         {
+          rotateX: "-90deg",
+          perspective: "1000px",
+          autoAlpha: 0
+        },
+        {
+          scrollTrigger: { trigger: "#js-about", start: "top center" },
           rotateX: "0",
           perspective: "1000px",
           autoAlpha: 1,
-          duration: 0.9
-        },
-        "-=0.2"
-      )
-      .fromTo("#js-home-play", { autoAlpha: 0 }, { autoAlpha: 1 })
-      .fromTo(
-        "#js-home-play-path",
-        { strokeDashoffset: -308 },
-        { strokeDashoffset: 0, duration: 0.9 },
-        "-=0.3"
+          duration: 1.6
+        }
       );
-    // Scroll animations
-    gsap.fromTo(
-      "#js-about-video",
-      {
-        rotateX: "-90deg",
-        perspective: "1000px",
-        autoAlpha: 0
-      },
-      {
+      gsap.to("#js-about-text", {
         scrollTrigger: { trigger: "#js-about", start: "top center" },
-        rotateX: "0",
-        perspective: "1000px",
-        autoAlpha: 1,
-        duration: 1.6
-      }
-    );
-    gsap.to("#js-about-text", {
-      scrollTrigger: { trigger: "#js-about", start: "top center" },
-      opacity: 1,
-      duration: 0.9,
-      delay: 1
-    });
-    gsap.fromTo(
-      "#js-work-img",
-      { rotateX: "-90deg", perspective: "1000px", autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: "#js-work-container", start: "top center" },
-        stagger: 0.3,
-        rotateX: "0",
-        perspective: "1000px",
-        autoAlpha: 1,
-        duration: 1.6
-      }
-    );
-    gsap.fromTo(
-      "#js-client",
-      { autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: "#js-client-container", start: "top center" },
-        stagger: 0.3,
-        autoAlpha: 1,
-        duration: 1.1
-      }
-    );
-    gsap.fromTo(
-      "#js-footer",
-      { autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: "#js-footer-container", start: "top center" },
-        stagger: 0.3,
-        autoAlpha: 1,
-        duration: 0.9
-      }
-    );
+        opacity: 1,
+        duration: 0.9,
+        delay: 1
+      });
+      gsap.fromTo(
+        "#js-work-img",
+        { rotateX: "-90deg", perspective: "1000px", autoAlpha: 0 },
+        {
+          scrollTrigger: { trigger: "#js-work-container", start: "top center" },
+          stagger: 0.3,
+          rotateX: "0",
+          perspective: "1000px",
+          autoAlpha: 1,
+          duration: 1.6
+        }
+      );
+      gsap.fromTo(
+        "#js-client",
+        { autoAlpha: 0 },
+        {
+          scrollTrigger: {
+            trigger: "#js-client-container",
+            start: "top center"
+          },
+          stagger: 0.3,
+          autoAlpha: 1,
+          duration: 1.1
+        }
+      );
+      gsap.fromTo(
+        "#js-footer",
+        { autoAlpha: 0 },
+        {
+          scrollTrigger: {
+            trigger: "#js-footer-container",
+            start: "top center"
+          },
+          stagger: 0.3,
+          autoAlpha: 1,
+          duration: 0.9
+        }
+      );
+    }
     //binding listeners
     document.body.addEventListener("click", setColor);
     window.addEventListener("mousemove", moveCursor);

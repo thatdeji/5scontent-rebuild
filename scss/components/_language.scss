@@ -1,6 +1,7 @@
 .c-lang {
   position: relative;
   font-size: 1.9rem;
+  transform: translateY(-100px);
   @include media("<=1700px") {
     font-size: 1.4rem;
   }
@@ -21,7 +22,7 @@
     bottom: 15px;
     right: 56px;
     z-index: 100;
-    transform: rotate(90deg);
+    transform: translateX(100px) rotate(90deg);
     transform-origin: right bottom;
     @include media("<=999px") {
       display: block;

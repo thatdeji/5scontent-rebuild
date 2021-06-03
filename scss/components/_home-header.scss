@@ -21,6 +21,7 @@
   }
   &__title {
     text-align: center;
+    transform: translateY(3vw);
     @include media("<=319px") {
       font-size: 2.5rem;
     }
@@ -40,6 +41,9 @@
       font-size: 5vw;
     }
   }
+  &__title-line {
+    transform: scaleY(0);
+  }
 }
 .c-home-header-play {
   position: relative;
@@ -47,6 +51,7 @@
   height: 150px;
   display: inline-block;
   text-transform: uppercase;
+  opacity: 0;
   @include media("<=768px") {
     width: 120px;
     height: 120px;
@@ -117,6 +122,7 @@
   z-index: -3;
   margin: -30px -70px -40px 0;
   transform-origin: top center;
+  transform: perspective(1000px) rotateX(-90deg);
   @include media(">=499px") {
     width: 300px;
     height: 290px;

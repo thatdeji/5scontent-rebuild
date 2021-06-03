@@ -1,5 +1,6 @@
 .c-menu {
   position: relative;
+  transform: translateY(-70px);
   @include media("<=999px") {
     width: 100%;
   }

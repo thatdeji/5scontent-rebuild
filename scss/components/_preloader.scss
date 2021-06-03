@@ -7,6 +7,7 @@
   background-color: var(--theme-1-bg);
   overflow: hidden;
   z-index: 9999;
+  transform-origin: top center;
   @include flex();
   &__line {
     position: relative;

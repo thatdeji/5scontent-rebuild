@@ -37,13 +37,13 @@
       transform: translateY(50%);
     }
     @include media(">=1200px") {
-      font-size: 1.7rem;
-    }
-    @include media("<=1199px") {
       font-size: 1.6rem;
     }
-    @include media("<=700px") {
+    @include media("<=1199px") {
       font-size: 1.5rem;
+    }
+    @include media("<=700px") {
+      font-size: 1.4rem;
     }
     &:before {
       content: "";

@@ -78,6 +78,7 @@
   }
   &__showcase {
     position: relative;
+    transform-origin: top center;
   }
   &__thumbnail {
     object-fit: cover;
@@ -88,7 +89,7 @@
   &__title {
     padding: 15px 0;
     position: relative;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     &:before {
       @include media(">=1000px") {

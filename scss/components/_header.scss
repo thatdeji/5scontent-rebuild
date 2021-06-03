@@ -37,6 +37,7 @@
     font-size: 1.9rem;
     text-transform: uppercase;
     font-weight: 400;
+    transform: translateY(-60px);
     @include media("<=1750px") {
       font-size: 1.4rem;
     }
