@@ -37,6 +37,9 @@ h6 {
   font-weight: 300;
   text-transform: uppercase;
 }
+svg {
+  transition: fill 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 .o-bg-theme {
   background-color: var(--theme-1-bg);
 }

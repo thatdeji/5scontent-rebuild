@@ -1,0 +1,16 @@
+.c-site-logo {
+  position: fixed;
+  z-index: 1000;
+  @include media(">=1000px") {
+    bottom: 30px;
+    left: 30px;
+  }
+  @include media("<=999px") {
+    bottom: 35px;
+    left: 35px;
+  }
+  @include media("<=499px") {
+    bottom: 20px;
+    left: 20px;
+  }
+}

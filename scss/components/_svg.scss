@@ -14,6 +14,21 @@
   transition: stroke-dashoffset 0.3s linear,
     stroke 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.c-site-logo__svg {
+  fill: var(--theme-1-color);
+  @include media(">=1000px") {
+    width: 90px;
+    height: 90px;
+  }
+  @include media("<=999px") {
+    width: 95px;
+    height: 70px;
+  }
+  @include media("<=699px") {
+    width: 75px;
+    height: 54px;
+  }
+}
 .c-footer__link .c-svg-circle {
   left: -1.3rem;
   bottom: 0;
