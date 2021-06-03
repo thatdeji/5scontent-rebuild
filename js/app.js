@@ -80,6 +80,10 @@
       //Intro Animation
       const tl = gsap.timeline();
       tl
+        .to("#js-site-logo", {
+          x: "0",
+          ease: "Expo.easeOut"
+        })
         .to("#js-language", {
           y: "0",
           ease: "Expo.easeOut"
@@ -101,6 +105,15 @@
           stagger: 0.3,
           ease: Power2.easeInOut
         })
+        .to(
+          "#js-title-line-2",
+          {
+            scaleY: "1",
+            stagger: 0.3,
+            ease: Power2.easeInOut
+          },
+          "-=1.1"
+        )
         .to("#js-home-title", {
           y: "0",
           ease: Power2.easeInOut
@@ -141,7 +154,7 @@
         scrollTrigger: { trigger: "#js-about", start: "top center" },
         opacity: 1,
         duration: 0.9,
-        delay: 1
+        delay: 0.2
       });
       gsap.fromTo(
         "#js-work-img",

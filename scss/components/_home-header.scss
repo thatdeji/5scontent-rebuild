@@ -19,9 +19,24 @@
       @include flex();
     }
   }
+  &__title-container {
+    @include media(">=1000px") {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+  }
   &__title {
     text-align: center;
-    transform: translateY(3vw);
+    @include media(">=1000px") {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include flex();
+    }
+    transform: translate(3vw);
     @include media("<=319px") {
       font-size: 2.5rem;
     }
@@ -39,6 +54,12 @@
     }
     @include media(">=1200px") {
       font-size: 5vw;
+    }
+    &--secondary {
+      color: transparent;
+      @include media("<=999px") {
+        display: none;
+      }
     }
   }
   &__title-line {

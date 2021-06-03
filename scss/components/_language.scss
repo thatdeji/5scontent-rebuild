@@ -27,6 +27,9 @@
     @include media("<=999px") {
       display: block;
     }
+    @include media("<=499px") {
+      bottom: 8px;
+    }
   }
   &__list {
     display: flex;

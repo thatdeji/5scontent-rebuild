@@ -1,6 +1,7 @@
 .c-site-logo {
   position: fixed;
   z-index: 1000;
+  transform: translateX(-200%);
   @include media(">=1000px") {
     bottom: 30px;
     left: 30px;
