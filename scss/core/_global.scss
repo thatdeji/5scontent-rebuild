@@ -13,6 +13,18 @@ html {
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+  &::-webkit-scrollbar {
+    width: 10px;
+    @include media(">=1000px") {
+      width: 7.5px;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--theme-1-color);
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--theme-1-bg);
+  }
 }
 body {
   background-color: var(--theme-1-bg);

@@ -4,6 +4,9 @@
   left: 0;
   width: 100%;
   z-index: 2;
+  @include media("<=999px") {
+    background: var(--theme-1-bg);
+  }
   &__line {
     position: relative;
     &:before,
@@ -29,7 +32,7 @@
       }
     }
     &:before {
-      transform: translateY(-100%);
+      transform: translateY(-130%);
     }
   }
   &__tagline {

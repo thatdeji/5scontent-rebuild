@@ -22,6 +22,24 @@ html {
   height: 100%;
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+@media (min-width: 1000px) {
+  html::-webkit-scrollbar {
+    width: 7.5px;
+  }
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--theme-1-color);
+}
+
+html::-webkit-scrollbar-track {
+  background-color: var(--theme-1-bg);
+}
+
 body {
   background-color: var(--theme-1-bg);
   color: var(--theme-1-color);
@@ -409,6 +427,12 @@ svg {
   z-index: 2;
 }
 
+@media (max-width: 999px) {
+  .c-header {
+    background: var(--theme-1-bg);
+  }
+}
+
 .c-header__line {
   position: relative;
 }
@@ -438,8 +462,8 @@ svg {
 }
 
 .c-header__line:before {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-130%);
+          transform: translateY(-130%);
 }
 
 .c-header__tagline {
@@ -680,6 +704,12 @@ svg {
   left: -1.3rem;
   bottom: 0;
   top: 0.2rem;
+}
+
+@media (max-width: 999px) {
+  .c-footer__link .c-svg-circle {
+    display: none;
+  }
 }
 
 .is-active .c-svg-circle {
@@ -1207,19 +1237,19 @@ svg {
   display: block;
 }
 
-.c-work__link:hover .c-quickview__label {
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
-.c-work__link:hover .c-work__marquee,
-.c-work__link:hover .c-work__video {
-  opacity: 1;
-}
-
-.c-work__link:hover .c-work__text,
-.c-work__link:hover .c-work__thumbnail {
-  opacity: 0;
+@media (hover) {
+  .c-work__link:hover .c-quickview__label {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .c-work__link:hover .c-work__marquee,
+  .c-work__link:hover .c-work__video {
+    opacity: 1;
+  }
+  .c-work__link:hover .c-work__text,
+  .c-work__link:hover .c-work__thumbnail {
+    opacity: 0;
+  }
 }
 
 .c-work__showcase {
@@ -1406,13 +1436,19 @@ svg {
   }
 }
 
+@media (max-width: 999px) {
+  .c-quickview__label {
+    display: none;
+  }
+}
+
 .c-quickview__play {
   overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
 }
 
 @media (min-width: 1000px) {
@@ -1444,30 +1480,58 @@ svg {
 }
 
 .c-quickview__play:after {
-  top: 5px;
-  left: 5px;
+  top: 6px;
+  left: 6px;
+  bottom: 6px;
+  right: 6px;
   border: 1px solid var(--theme-1-color);
   width: 68px;
   height: 68px;
-  -webkit-transform: translate(-6px, -6px) scale3d(0, 0, 1);
-          transform: translate(-6px, -6px) scale3d(0, 0, 1);
+  -webkit-transform: scale3d(0, 0, 1);
+          transform: scale3d(0, 0, 1);
 }
 
-.c-quickview:hover .c-quickview__play:before {
-  -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
-  opacity: 1;
+.c-quickview__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  fill: var(--theme-1-color);
+  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+          transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+  -webkit-transition: -webkit-transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: -webkit-transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.c-quickview:hover .c-quickview__play:after {
-  -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
+@media (min-width: 1000px) {
+  .c-quickview__svg {
+    width: 30px;
+    height: 45px;
+    margin-left: 3.1px;
+  }
 }
 
-.c-quickview:hover .c-quickview__label {
-  border-radius: 100%;
-  -webkit-transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
-          transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+@media (hover) {
+  .c-quickview:hover .c-quickview__play:before {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  .c-quickview:hover .c-quickview__play:after {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  .c-quickview:hover .c-quickview__label {
+    border-radius: 100%;
+    -webkit-transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+            transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+  }
+  .c-quickview:hover .c-quickview__svg {
+    -webkit-transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+            transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+  }
 }
 
 .c-clients__header {

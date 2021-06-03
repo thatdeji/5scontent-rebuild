@@ -33,6 +33,9 @@
   left: -1.3rem;
   bottom: 0;
   top: 0.2rem;
+  @include media("<=999px") {
+    display: none;
+  }
 }
 .is-active .c-svg-circle {
   stroke-dashoffset: 0;

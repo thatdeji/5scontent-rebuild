@@ -62,17 +62,19 @@
     width: 100%;
     height: 100%;
     display: block;
-    &:hover {
-      .c-quickview__label {
-        transform: translate(0, -50%);
-      }
-      .c-work__marquee,
-      .c-work__video {
-        opacity: 1;
-      }
-      .c-work__text,
-      .c-work__thumbnail {
-        opacity: 0;
+    @media (hover) {
+      &:hover {
+        .c-quickview__label {
+          transform: translate(0, -50%);
+        }
+        .c-work__marquee,
+        .c-work__video {
+          opacity: 1;
+        }
+        .c-work__text,
+        .c-work__thumbnail {
+          opacity: 0;
+        }
       }
     }
   }

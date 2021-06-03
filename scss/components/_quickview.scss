@@ -24,13 +24,16 @@
     @include media(">=1000px") {
       padding: 5px 10px;
     }
+    @include media("<=999px") {
+      display: none;
+    }
   }
   &__play {
     overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate3d(-50%, -50%, 0);
     @include media(">=1000px") {
       width: 80px;
       height: 80px;
@@ -53,25 +56,46 @@
       opacity: 0;
     }
     &:after {
-      top: 5px;
-      left: 5px;
+      top: 6px;
+      left: 6px;
+      bottom: 6px;
+      right: 6px;
       border: 1px solid var(--theme-1-color);
       width: 68px;
       height: 68px;
-      transform: translate(-6px, -6px) scale3d(0, 0, 1);
+      transform: scale3d(0, 0, 1);
     }
   }
-  &:hover {
-    .c-quickview__play:before {
-      transform: scale3d(1, 1, 1);
-      opacity: 1;
+  &__svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    fill: var(--theme-1-color);
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+    transition: transform 0.3s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    @include media(">=1000px") {
+      width: 30px;
+      height: 45px;
+      margin-left: 3.1px;
     }
-    .c-quickview__play:after {
-      transform: scale3d(1, 1, 1);
-    }
-    .c-quickview__label {
-      border-radius: 100%;
-      transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+  }
+  @media (hover) {
+    &:hover {
+      .c-quickview__play:before {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+      }
+      .c-quickview__play:after {
+        transform: scale3d(1, 1, 1);
+      }
+      .c-quickview__label {
+        border-radius: 100%;
+        transform: translate3d(0, -50%, 0) scale3d(0, 1, 1);
+      }
+      .c-quickview__svg {
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+      }
     }
   }
 }
