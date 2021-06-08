@@ -7,7 +7,6 @@
     top: 0;
     height: 1px;
     width: 100%;
-    // z-index: 2;
     background-color: var(--theme-1-color);
   }
   @include media(">=700px") {

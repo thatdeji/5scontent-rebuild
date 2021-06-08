@@ -5,8 +5,14 @@
     text-transform: uppercase;
     font-size: 1.6rem;
     font-family: Karla, Helvetica, Arial, sans-serif;
+    @include media(">=1000px") {
+      font-size: 1.9rem;
+    }
     @include media(">=500px") {
       font-size: 2rem;
+    }
+    @include media("<=500px") {
+      font-size: 1.5rem;
     }
     &:after {
       content: "";
@@ -144,6 +150,10 @@
     @include media("<=999px") {
       text-align: center;
       font-size: 1.5rem;
+    }
+    @include media("<=499px") {
+      text-align: center;
+      font-size: 1.4rem;
     }
   }
 }

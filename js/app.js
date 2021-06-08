@@ -12,6 +12,7 @@
         delay: 3,
         onComplete: function() {
           pageAnimation();
+          pinEffect();
         }
       }
     );
@@ -58,24 +59,55 @@
     }
     // Checks screen size to show scroll pinning effect
     function pinEffect() {
-      if (screenSize.matches) {
-        gsap.to("#js-home-header", {
-          scrollTrigger: {
-            trigger: "#js-home-header",
-            endTrigger: "#js-about",
-            pin: true
-          }
-        });
-        gsap.to("#js-work-header", {
-          scrollTrigger: {
-            trigger: "#js-work-header",
-            endTrigger: "#js-footer-container",
-            pin: true
-          }
-        });
-      }
+      ScrollTrigger.matchMedia({
+        "(min-width: 1000px)": function() {
+          gsap.to("#js-home-header", {
+            scrollTrigger: {
+              trigger: "#js-home-header",
+              endTrigger: "#js-about",
+              pin: true
+            }
+          });
+          gsap.to("#js-home-header--secondary", {
+            scrollTrigger: {
+              trigger: "#js-home-header--secondary",
+              endTrigger: "#js-about",
+              pin: true
+            }
+          });
+          gsap.to("#js-work-header", {
+            scrollTrigger: {
+              trigger: "#js-work-header",
+              endTrigger: "#js-footer-container",
+              pin: true
+            }
+          });
+        }
+      });
+      // if (screenSize.matches) {
+      //   gsap.to("#js-home-header", {
+      //     scrollTrigger: {
+      //       trigger: "#js-home-header",
+      //       endTrigger: "#js-about",
+      //       pin: true
+      //     }
+      //   });
+      //   gsap.to("#js-home-header--secondary", {
+      //     scrollTrigger: {
+      //       trigger: "#js-home-header--secondary",
+      //       endTrigger: "#js-about",
+      //       pin: true
+      //     }
+      //   });
+      //   gsap.to("#js-work-header", {
+      //     scrollTrigger: {
+      //       trigger: "#js-work-header",
+      //       endTrigger: "#js-footer-container",
+      //       pin: true
+      //     }
+      //   });
+      // }
     }
-    pinEffect();
     function pageAnimation() {
       //Intro Animation
       const tl = gsap.timeline();
@@ -109,6 +141,20 @@
           "#js-title-line-2",
           {
             scaleY: "1",
+            stagger: 0.3,
+            ease: Power2.easeInOut
+          },
+          "-=1.1"
+        )
+        .to("#js-title-line", {
+          y: 0,
+          stagger: 0.3,
+          ease: Power2.easeInOut
+        })
+        .to(
+          "#js-title-line-2",
+          {
+            y: 0,
             stagger: 0.3,
             ease: Power2.easeInOut
           },
@@ -173,8 +219,7 @@
         { autoAlpha: 0 },
         {
           scrollTrigger: {
-            trigger: "#js-client-container",
-            start: "top center"
+            trigger: "#js-client-container"
           },
           stagger: 0.3,
           autoAlpha: 1,
@@ -186,8 +231,7 @@
         { autoAlpha: 0 },
         {
           scrollTrigger: {
-            trigger: "#js-footer-container",
-            start: "top center"
+            trigger: "#js-footer-container"
           },
           stagger: 0.3,
           autoAlpha: 1,
@@ -198,6 +242,6 @@
     //binding listeners
     document.body.addEventListener("click", setColor);
     window.addEventListener("mousemove", moveCursor);
-    screenSize.addListener(pinEffect);
+    // screenSize.addListener(pinEffect);
   });
 })();

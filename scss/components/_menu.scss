@@ -41,5 +41,8 @@
     @include media("<=499px") {
       font-size: 1.4rem;
     }
+    @include media("<=400px") {
+      font-size: 1.15rem;
+    }
   }
 }
