@@ -89,10 +89,10 @@
             divisor,
             elem
           ) {
-            let skew = 0;
-            function work(skew) {
+            let translate = 0;
+            function work(translate) {
               const workAnim = gsap.to(elem, {
-                y: skew,
+                y: translate,
                 paused: true
               });
               workAnim.play();
@@ -103,11 +103,12 @@
               scrub: 1,
               onEnter: () => work(),
               onUpdate: self => {
-                skew =
-                  skew > speedLimitPositive || skew < speedLimitNegative
+                translate =
+                  translate > speedLimitPositive ||
+                  translate < speedLimitNegative
                     ? 0
                     : self.getVelocity() / divisor;
-                work(skew);
+                work(translate);
               }
             });
             gsap.set(elem, {
