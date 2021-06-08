@@ -62,7 +62,8 @@
     <!--container-->
     <div class="o-container">
       <div class="c-header__line" id="js-header-line">
-
+        <!--line for large screens-->
+        <div class="c-header__line--lg" id="js-header-line-lg"></div>
 
         <!--grid system-->
         <div class="o-grid">
@@ -280,7 +281,7 @@
             </div>
             <!--work-->
             <ul class="c-work__list" id="js-work-container">
-              <li class="c-work__item">
+              <li class="c-work__item js-work-scroll-slow" id="js-work-item">
                 <a href="#" class="c-work__link">
                   <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/THUMBNAIL-1.png" alt="Musicbed showcase image" class="c-work__thumbnail">
@@ -325,7 +326,7 @@
                   </div>
                 </a>
               </li>
-              <li class="c-work__item">
+              <li class="c-work__item js-work-scroll-fast">
                 <a href="#" class="c-work__link">
                   <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/Group-1.png" alt="Musicbed showcase image" class="c-work__thumbnail">
@@ -370,7 +371,7 @@
                   </div>
                 </a>
               </li>
-              <li class="c-work__item">
+              <li class="c-work__item js-work-scroll-fast">
                 <a href="#" class="c-work__link">
                   <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/DECA_Thumbail.jpg" alt="Musicbed showcase image" class="c-work__thumbnail">
@@ -415,7 +416,7 @@
                   </div>
                 </a>
               </li>
-              <li class="c-work__item">
+              <li class="c-work__item js-work-scroll-slow">
                 <a href="#" class="c-work__link">
                   <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/Simons_Thumbnail.jpg" alt="Musicbed showcase image" class="c-work__thumbnail">
@@ -460,7 +461,7 @@
                   </div>
                 </a>
               </li>
-              <li class="c-work__item">
+              <li class="c-work__item js-work-scroll-fast">
                 <a href="#" class="c-work__link">
                   <div class="c-work__showcase" id="js-work-img">
                     <img src="assets/img/THUMBNAIL-3.png" alt="Musicbed showcase image" class="c-work__thumbnail">
@@ -545,6 +546,19 @@
                           .lancome0 {
                             display: none;
                           }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -799,6 +813,19 @@
                             clip-rule: evenodd;
                             fill: #2F5E9C;
                           }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1371,6 +1398,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                           .airfrance1 {
                             clip-path: url(#SVGID_3_);
                           }
@@ -1630,6 +1670,10 @@
   <script src="lib/gsap.min.js"></script>
   <script src="lib/ScrollTrigger.min.js"></script>
   <script src="lib/CSSRulePlugin.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>-->
+
   <script src="js/app.js"></script>
 </body>
 

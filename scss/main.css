@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
 :root {
   --theme-1-bg: #ebeded;
   --theme-1-color: #e83c38;
@@ -66,7 +67,7 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  font-family: perpetua titling mt, Georgia, times new roman, Times, serif;
+  font-family: perpetua titling mt, Karla, Georgia, times new roman, Times, serif;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -443,9 +444,12 @@ svg {
   position: relative;
 }
 
-.c-header__line:before, .c-header__line:after {
-  position: absolute;
+.c-header__line:after {
   content: "";
+}
+
+.c-header__line--lg, .c-header__line:after {
+  position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
@@ -462,17 +466,18 @@ svg {
 }
 
 @media (max-width: 999px) {
-  .c-header__line:before {
+  .c-header__line--lg {
     display: none;
   }
 }
 
-.c-header__line:before {
+.c-header__line--lg {
   -webkit-transform: translateY(-130%);
           transform: translateY(-130%);
 }
 
 .c-header__tagline {
+  font-family: Karla, Helvetica, Arial, sans-serif;
   padding: 25px 0;
   font-size: 1.9rem;
   text-transform: uppercase;
@@ -836,8 +841,8 @@ svg {
 
 .c-home-header__title {
   text-align: center;
-  -webkit-transform: translate(3vw);
-          transform: translate(3vw);
+  -webkit-transform: translate(0, 3vw);
+          transform: translate(0, 3vw);
 }
 
 @media (min-width: 1000px) {

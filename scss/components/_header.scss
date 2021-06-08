@@ -9,10 +9,12 @@
   }
   &__line {
     position: relative;
-    &:before,
+    &:after {
+      content: "";
+    }
+    &--lg,
     &:after {
       position: absolute;
-      content: "";
       width: 100%;
       height: 100%;
       left: 0;
@@ -27,15 +29,16 @@
       }
     }
     @include media("<=999px") {
-      &:before {
+      &--lg {
         display: none;
       }
     }
-    &:before {
+    &--lg {
       transform: translateY(-130%);
     }
   }
   &__tagline {
+    font-family: Karla, Helvetica, Arial, sans-serif;
     padding: 25px 0;
     font-size: 1.9rem;
     text-transform: uppercase;

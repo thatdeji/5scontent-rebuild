@@ -82,31 +82,44 @@
               pin: true
             }
           });
+
+          function createScrollEffect(
+            speedLimitPositive,
+            speedLimitNegative,
+            divisor,
+            elem
+          ) {
+            let skew = 0;
+            function work(skew) {
+              const workAnim = gsap.to(elem, {
+                y: skew,
+                paused: true
+              });
+              workAnim.play();
+            }
+            ScrollTrigger.create({
+              trigger: elem,
+              start: "top center",
+              scrub: 1,
+              onEnter: () => work(),
+              onUpdate: self => {
+                skew =
+                  skew > speedLimitPositive || skew < speedLimitNegative
+                    ? 0
+                    : self.getVelocity() / divisor;
+                work(skew);
+              }
+            });
+            gsap.set(elem, {
+              transformOrigin: "right center",
+              force3D: true
+            });
+          }
+          createScrollEffect(50, -50, -5, ".js-work-scroll-slow");
+          createScrollEffect(100, -100, -5, ".js-work-scroll-fast");
+          createScrollEffect(5, -5, -20, "#js-about-text");
         }
       });
-      // if (screenSize.matches) {
-      //   gsap.to("#js-home-header", {
-      //     scrollTrigger: {
-      //       trigger: "#js-home-header",
-      //       endTrigger: "#js-about",
-      //       pin: true
-      //     }
-      //   });
-      //   gsap.to("#js-home-header--secondary", {
-      //     scrollTrigger: {
-      //       trigger: "#js-home-header--secondary",
-      //       endTrigger: "#js-about",
-      //       pin: true
-      //     }
-      //   });
-      //   gsap.to("#js-work-header", {
-      //     scrollTrigger: {
-      //       trigger: "#js-work-header",
-      //       endTrigger: "#js-footer-container",
-      //       pin: true
-      //     }
-      //   });
-      // }
     }
     function pageAnimation() {
       //Intro Animation
@@ -202,6 +215,18 @@
         duration: 0.9,
         delay: 0.2
       });
+      const lineAnim = gsap.to("#js-header-line-lg", { y: 0, paused: true });
+      ScrollTrigger.create({
+        trigger: "#js-about",
+        start: "top center",
+        onEnter: () => lineAnim.play()
+      });
+
+      ScrollTrigger.create({
+        trigger: "#js-about",
+        start: "top center",
+        onLeaveBack: () => lineAnim.reverse(0)
+      });
       gsap.fromTo(
         "#js-work-img",
         { rotateX: "-90deg", perspective: "1000px", autoAlpha: 0 },
@@ -242,6 +267,5 @@
     //binding listeners
     document.body.addEventListener("click", setColor);
     window.addEventListener("mousemove", moveCursor);
-    // screenSize.addListener(pinEffect);
   });
 })();
