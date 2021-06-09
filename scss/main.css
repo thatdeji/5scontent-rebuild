@@ -1266,6 +1266,13 @@ svg {
   }
 }
 
+@media (max-width: 999px) {
+  .c-work__item {
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+}
+
 .c-work__link {
   position: relative;
   overflow: hidden;

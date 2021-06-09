@@ -55,6 +55,9 @@
         margin-left: 17vw;
       }
     }
+    @include media("<=999px") {
+      transform: none !important;
+    }
   }
   &__link {
     position: relative;

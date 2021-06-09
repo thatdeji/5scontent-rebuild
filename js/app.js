@@ -1,5 +1,5 @@
 (function() {
-  window.addEventListener("load", () => {
+  window.addEventListener("DOMContentLoaded", () => {
     // preloader animation
     gsap.timeline().fromTo(
       "#js-preloader",
@@ -12,7 +12,7 @@
         delay: 3,
         onComplete: function() {
           pageAnimation();
-          pinEffect();
+          scrollEffect();
         }
       }
     );
@@ -57,8 +57,8 @@
         y: yPos
       });
     }
-    // Checks screen size to show scroll pinning effect
-    function pinEffect() {
+    // Checks screen size to show scroll pinning & translation effect
+    function scrollEffect() {
       ScrollTrigger.matchMedia({
         "(min-width: 1000px)": function() {
           gsap.to("#js-home-header", {
@@ -82,43 +82,26 @@
               pin: true
             }
           });
-
-          function createScrollEffect(
-            speedLimitPositive,
-            speedLimitNegative,
-            divisor,
-            elem
-          ) {
-            let translate = 0;
-            function work(translate) {
-              const workAnim = gsap.to(elem, {
-                y: translate,
-                paused: true
-              });
-              workAnim.play();
-            }
-            ScrollTrigger.create({
-              trigger: elem,
-              start: "top center",
-              scrub: 1,
-              onEnter: () => work(),
-              onUpdate: self => {
-                translate =
-                  translate > speedLimitPositive ||
-                  translate < speedLimitNegative
-                    ? 0
-                    : self.getVelocity() / divisor;
-                work(translate);
+          function scrollTranslateEffect(elem, startVal, endVal) {
+            gsap.fromTo(
+              elem,
+              { y: startVal },
+              {
+                scrollTrigger: {
+                  trigger: elem,
+                  scrub: 2
+                },
+                y: endVal,
+                duration: 5
               }
-            });
-            gsap.set(elem, {
-              transformOrigin: "right center",
-              force3D: true
-            });
+            );
           }
-          createScrollEffect(50, -50, -5, ".js-work-scroll-slow");
-          createScrollEffect(100, -100, -5, ".js-work-scroll-fast");
-          createScrollEffect(5, -5, -20, "#js-about-text");
+          scrollTranslateEffect("#js-about-text", 50, -50);
+          scrollTranslateEffect("#js-work-scroll-1", 100, -100);
+          scrollTranslateEffect("#js-work-scroll-2", 50, -50);
+          scrollTranslateEffect("#js-work-scroll-3", -50, 50);
+          scrollTranslateEffect("#js-work-scroll-4", -100, 100);
+          scrollTranslateEffect("#js-work-scroll-5", 50, -50);
         }
       });
     }
