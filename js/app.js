@@ -16,12 +16,12 @@
         }
       }
     );
-    // ScrollTriger initialization
-    gsap.registerPlugin(ScrollTrigger);
     //var
     const colorList = ["#ebeded", "#e83c38", "#a6d1c9", "#282b29", "#e83c38"];
     const bgList = ["#00a19a", "#a6d1c9", "#282b29", "#f4c4c4", "#ebeded"];
     let current = 0;
+    // ScrollTriger initialization
+    gsap.registerPlugin(ScrollTrigger);
     const screenSize = window.matchMedia("(min-width: 1000px)");
     //changes css variables
     function changeVariable(prop, val) {
@@ -82,6 +82,16 @@
               pin: true
             }
           });
+
+          const scrollTranslateElement = [
+            { name: "#js-about-text", range: [5, -5] },
+            { name: "#js-work-scroll-1", range: [100, -100] },
+            { name: "#js-work-scroll-2", range: [50, -50] },
+            { name: "#js-work-scroll-3", range: [-50, 50] },
+            { name: "#js-work-scroll-4", range: [-100, 100] },
+            { name: "#js-work-scroll-5", range: [50, -50] }
+          ];
+          // translates element on scroll
           function scrollTranslateEffect(elem, startVal, endVal) {
             gsap.fromTo(
               elem,
@@ -96,12 +106,9 @@
               }
             );
           }
-          scrollTranslateEffect("#js-about-text", 50, -50);
-          scrollTranslateEffect("#js-work-scroll-1", 100, -100);
-          scrollTranslateEffect("#js-work-scroll-2", 50, -50);
-          scrollTranslateEffect("#js-work-scroll-3", -50, 50);
-          scrollTranslateEffect("#js-work-scroll-4", -100, 100);
-          scrollTranslateEffect("#js-work-scroll-5", 50, -50);
+          scrollTranslateElement.forEach(({ name, range }) => {
+            scrollTranslateEffect(name, range[0], range[1]);
+          });
         }
       });
     }
@@ -248,7 +255,7 @@
         }
       );
     }
-    //binding listeners
+    //binding event listeners
     document.body.addEventListener("click", setColor);
     window.addEventListener("mousemove", moveCursor);
   });
