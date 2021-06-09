@@ -136,34 +136,30 @@
           y: "0",
           ease: "Expo.easeOut"
         })
-        .to("#js-title-line", {
+        .to("#js-title-line--1", {
           scaleY: "1",
-          stagger: 0.3,
           ease: Power2.easeInOut
         })
-        .to(
-          "#js-title-line-2",
-          {
-            scaleY: "1",
-            stagger: 0.3,
-            ease: Power2.easeInOut
-          },
-          "-=1.1"
-        )
-        .to("#js-title-line", {
+        .to("#js-title-line--1", {
           y: 0,
-          stagger: 0.3,
           ease: Power2.easeInOut
         })
-        .to(
-          "#js-title-line-2",
-          {
-            y: 0,
-            stagger: 0.3,
-            ease: Power2.easeInOut
-          },
-          "-=1.1"
-        )
+        .to("#js-title-line--2", {
+          scaleY: "1",
+          ease: Power2.easeInOut
+        })
+        .to("#js-title-line--2", {
+          y: 0,
+          ease: Power2.easeInOut
+        })
+        .to("#js-title-line--3", {
+          scaleY: "1",
+          ease: Power2.easeInOut
+        })
+        .to("#js-title-line--3", {
+          y: 0,
+          ease: Power2.easeInOut
+        })
         .to("#js-home-title", {
           y: "0",
           ease: Power2.easeInOut
@@ -210,12 +206,7 @@
       ScrollTrigger.create({
         trigger: "#js-about",
         start: "top center",
-        onEnter: () => lineAnim.play()
-      });
-
-      ScrollTrigger.create({
-        trigger: "#js-about",
-        start: "top center",
+        onEnter: () => lineAnim.play(),
         onLeaveBack: () => lineAnim.reverse(0)
       });
       gsap.fromTo(

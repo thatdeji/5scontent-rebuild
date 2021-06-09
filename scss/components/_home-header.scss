@@ -47,7 +47,6 @@
       height: 100%;
       @include flex();
     }
-    transform: translate(0, 3vw);
     @include media("<=319px") {
       font-size: 2.5rem;
     }

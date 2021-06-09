@@ -841,8 +841,6 @@ svg {
 
 .c-home-header__title {
   text-align: center;
-  -webkit-transform: translate(0, 3vw);
-          transform: translate(0, 3vw);
 }
 
 @media (min-width: 1000px) {
